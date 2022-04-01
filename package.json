@@ -1,0 +1,35 @@
+{
+  "name": "@stdlib/stats-base-dists-uniform-quantile",
+  "version": "0.0.0",
+  "description": "Uniform distribution quantile function.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/stats-base-dists-uniform-quantile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "statistics",
+    "stats",
+    "distribution",
+    "dist",
+    "probability",
+    "cdf",
+    "inverse",
+    "icdf",
+    "continuous",
+    "symmetric",
+    "univariate",
+    "uniform"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
