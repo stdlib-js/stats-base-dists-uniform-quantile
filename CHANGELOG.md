@@ -4,15 +4,25 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-02-12)
+## Unreleased (2025-02-15)
+
+<section class="features">
+
+### Features
+
+-   [`f0a9789`](https://github.com/stdlib-js/stdlib/commit/f0a978990a4e4cb1598203dd9b7a3e73665e82cd) - add C implementation for `stats/base/dists/uniform/quantile` [(#4143)](https://github.com/stdlib-js/stdlib/pull/4143)
+
+</section>
+
+<!-- /.features -->
 
 <section class="issues">
 
 ### Closed Issues
 
-This release closes the following issue:
+A total of 2 issues were closed in this release:
 
-[#4991](https://github.com/stdlib-js/stdlib/issues/4991)
+[#3834](https://github.com/stdlib-js/stdlib/issues/3834), [#4991](https://github.com/stdlib-js/stdlib/issues/4991)
 
 </section>
 
@@ -24,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`f0a9789`](https://github.com/stdlib-js/stdlib/commit/f0a978990a4e4cb1598203dd9b7a3e73665e82cd) - **feat:** add C implementation for `stats/base/dists/uniform/quantile` [(#4143)](https://github.com/stdlib-js/stdlib/pull/4143) _(by Prashant Kumar Yadav, Philipp Burckhardt, stdlib-bot)_
 -   [`273d9f1`](https://github.com/stdlib-js/stdlib/commit/273d9f168ed5293a563e6748219f79a033e7ca8a) - **bench:** refactor random number generation in benchmarks for `stats/base/dists/uniform` [(#5176)](https://github.com/stdlib-js/stdlib/pull/5176) _(by Gaurav, Philipp Burckhardt, stdlib-bot)_
 
 </details>
@@ -36,10 +47,11 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Gaurav
 -   Philipp Burckhardt
+-   Prashant Kumar Yadav
 
 </section>
 
