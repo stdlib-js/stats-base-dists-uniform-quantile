@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-24)
+## Unreleased (2025-06-30)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ A total of 3 issues were closed in this release:
 
 <details>
 
+-   [`a1e230f`](https://github.com/stdlib-js/stdlib/commit/a1e230f29297caa89880e9c194c615a0400fb7bc) - **chore:** clean up cppcheck-suppress comments _(by Karan Anand)_
 -   [`e1c0bd2`](https://github.com/stdlib-js/stdlib/commit/e1c0bd2a55ba108c5e77c99ab17117b9f6693508) - **chore:** address commit comment [(#5321)](https://github.com/stdlib-js/stdlib/pull/5321) _(by Harsh, Philipp Burckhardt)_
 -   [`f0a9789`](https://github.com/stdlib-js/stdlib/commit/f0a978990a4e4cb1598203dd9b7a3e73665e82cd) - **feat:** add C implementation for `stats/base/dists/uniform/quantile` [(#4143)](https://github.com/stdlib-js/stdlib/pull/4143) _(by Prashant Kumar Yadav, Philipp Burckhardt, stdlib-bot)_
 -   [`273d9f1`](https://github.com/stdlib-js/stdlib/commit/273d9f168ed5293a563e6748219f79a033e7ca8a) - **bench:** refactor random number generation in benchmarks for `stats/base/dists/uniform` [(#5176)](https://github.com/stdlib-js/stdlib/pull/5176) _(by Gaurav, Philipp Burckhardt, stdlib-bot)_
@@ -48,10 +49,11 @@ A total of 3 issues were closed in this release:
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Gaurav
 -   Harsh
+-   Karan Anand
 -   Philipp Burckhardt
 -   Prashant Kumar Yadav
 
