@@ -58,25 +58,32 @@ for `0 <= p <= 1`, where `a` is the minimum support and `b` is the maximum suppo
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-uniform-quantile
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-uniform-quantile@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-dists-uniform-quantile/tags). For example,
-
-```javascript
-import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-uniform-quantile@v0.3.1-esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-uniform-quantile@esm/index.mjs';
+var quantile = require( '@stdlib/stats-base-dists-uniform-quantile' );
 ```
 
 #### quantile( p, a, b )
@@ -141,14 +148,9 @@ var y = myquantile( 0.8 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-uniform-quantile@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var quantile = require( '@stdlib/stats-base-dists-uniform-quantile' );
 
 var a;
 var b;
@@ -163,10 +165,6 @@ for ( i = 0; i < 25; i++ ) {
     y = quantile( p, a, b );
     console.log( 'p: %d, a: %d, b: %d, Q(p;a,b): %d', p.toFixed( 4 ), a.toFixed( 4 ), b.toFixed( 4 ), y.toFixed( 4 ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -175,7 +173,101 @@ for ( i = 0; i < 25; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/uniform/quantile.h"
+```
+
+#### stdlib_base_dists_uniform_quantile( p, a, b )
+
+Evaluates the [quantile-function][quantile-function] function for a [continuous uniform][uniform-distribution] distribution with minimum support `a` and maximum support `b` at a probability `p`.
+
+```c
+double out = stdlib_base_dists_uniform_quantile( 0.8, 0.0, 1.0 );
+// returns 0.8
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+-   **a**: `[in] double` minimum support.
+-   **b**: `[in] double` maximum support.
+
+```c
+double stdlib_base_dists_uniform_quantile( const double p, const double a, const double b );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/uniform/quantile.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v*(max-min) );
+}
+
+int main( void ) {
+    double a;
+    double b;
+    double p;
+    double y;
+    int i;
+
+    for ( i = 0; i < 25; i++ ) {
+        p = random_uniform( 0.0, 1.0 );
+        a = random_uniform( -20.0, 0.0 );
+        b = random_uniform( a, a+40.0 );
+        y = stdlib_base_dists_uniform_quantile( p, a, b );
+        printf( "p: %lf, a: %lf, b: %lf, Q(p;a,b): %lf\n", p, a, b, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -194,7 +286,7 @@ for ( i = 0; i < 25; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -224,8 +316,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/stats-base-dists-uniform-quantile.svg
 [npm-url]: https://npmjs.org/package/@stdlib/stats-base-dists-uniform-quantile
 
-[test-image]: https://github.com/stdlib-js/stats-base-dists-uniform-quantile/actions/workflows/test.yml/badge.svg?branch=v0.3.1
-[test-url]: https://github.com/stdlib-js/stats-base-dists-uniform-quantile/actions/workflows/test.yml?query=branch:v0.3.1
+[test-image]: https://github.com/stdlib-js/stats-base-dists-uniform-quantile/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/stats-base-dists-uniform-quantile/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-base-dists-uniform-quantile/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/stats-base-dists-uniform-quantile?branch=main
